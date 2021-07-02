@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+        <style>
+            #XMLTable th,
+            #XMLTable td {
+                border: 1px solid #03787c;
+                border-width: 2px;
+            }
+            th,
+            td {
+                padding: 13px 30px 7px 30px;
+            }
+            #XMLData,
+            #uploadXMLData {
+                text-align: -webkit-center;
+            }
+            .button {
+                font-size: 15px;
+                cursor: pointer;
+                outline: none;
+                color: #fff;
+                background-color: #067f82;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #c8c4c4;
+            }
+            .button:hover {
+                background-color: #29cdd2;
+            }
+            .button:active {
+                background-color: #29cdd2;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="XMLData">
+            <h1>GET XML Data from SharePoint Library</h1>
+            <table id="XMLTable"></table>
+        </div>
+        <br />
+        <div id="uploadXMLData">
+            <h1>Upload XML Data to SharePoint List</h1>
+            <button class="button" onclick="fnUploadData()">Upload</button>
+        </div>
+    </body>
+    <script type="text/javascript" src="../SiteAssets/XMLtoSP.js"></script>
+    <script>
+        $(document).ready(function () {
+            loadXMLData();
+        });
+    </script>
+</html>
